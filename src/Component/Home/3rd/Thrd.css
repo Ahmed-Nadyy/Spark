@@ -1,0 +1,48 @@
+.Thrd {
+background: linear-gradient(to right, #084FC7 , #7F56D9);
+background-size: cover;
+height: 75vh;
+width: 100%;
+} 
+
+.line{
+    width: 2.5px;
+    height: 25vh;
+    display: inline-block;
+}
+.icon{
+    width: 8vh;
+    
+}
+
+.features-body {
+
+    border-radius:5px;
+    width: 55vh;
+    margin: 0 15px 0 15px;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1399px) {
+    .Thrd {
+      padding: 10px; /* Reduce padding on smaller screens */
+      min-height: 75vh;
+    }
+    
+    .line{
+        display: none;
+    }
+    .icon {
+      width: 60px; /* Adjust the width of the icons for smaller screens */
+    }
+  
+    .features-body {
+      max-width: 300px; /* Adjust maximum width for smaller screens */
+      margin: 10px auto; /* Center the feature cards */
+    }
+
+}
