@@ -1,0 +1,25 @@
+.cont{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* width: 100%; */
+    white-space: wrap;
+}
+.txt{
+    max-width: 210px;
+    
+}
+.mcont{
+    max-height: 300px;
+    overflow-y: auto;
+}
+.btn{
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #040F7C, #7F56D9);
+    /* transition: all 0.5s; */
+}
+.btn:hover{
+    color: #FFFFFF;
+    background: linear-gradient(105deg, #040F7C, #7F56D9)
+}
