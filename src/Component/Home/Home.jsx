@@ -1,9 +1,12 @@
 import React from 'react'
+import Parent from './lastpart/Parent'
+import Footer from './lastpart/Footer'
 
 export default function Home() {
   return (
     <>
-      <h1 className='heading-font-r'>Home</h1>
+      <Parent />
+      <Footer/>
     </>
   )
 }
