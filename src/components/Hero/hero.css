@@ -1,0 +1,159 @@
+#hero .container {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    color: white;
+}
+
+#hero {
+    height: 684px;
+    background-image: linear-gradient(to right, #04016c 0%, #0052ee 80%, #04016c 100%);
+    background-color: #04016c;
+    padding: 80px 0;
+}
+
+#hero h5 {
+    letter-spacing: 2px;
+    padding: 10px 0;
+    color: #cccce1;
+}
+
+#hero .b-p {
+    font-size: 50px;
+    font-weight: 800;
+    width: 480px;
+    padding: 0 0 50px 0;
+}
+
+#hero span {
+    color: #2aaa94;
+}
+
+#hero .left {
+    width: 50%;
+}
+
+#hero .btns {
+    display: flex;
+    gap: 30px;
+    padding: 0 0 50px 0;
+}
+
+#hero .heroBtn {
+    background-color: transparent;
+    color: white;
+    padding: 15px 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#hero .heroBtn2 {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#hero .search {
+    position: relative;
+    width: 60%;
+}
+
+#hero #search {
+    padding: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+#hero .searchBtn {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 18.665px);
+    background-image: linear-gradient(to right, #1341a1 0%, #4d4cbf 50%, #7855d5 100%);
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#hero .right {
+    width: 250px;
+    font-weight: 100;
+    margin-top: 60px;
+    padding-left: 30px;
+    height: fit-content;
+    border-left: 1px solid #2aaa94;
+    position: relative;
+}
+
+#hero .img {
+    height: 600px;
+}
+
+#hero .right::before {
+    content: "“";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -19.6px;
+    top: calc(50% - 19.6px);
+    border-radius: 50%;
+    background-color: #2aaa94;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #0231ba;
+}
+
+#hero h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+#hero .text {
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: #cccce1;
+}
+
+#hero .stars {
+    font-size: 12px;
+    color: #2aaa94;
+}
+
+#hero .stars span {
+    margin-right: 10px;
+}
+
+#hero .awsomeIcons {
+    letter-spacing: 2px;
+}
+
+#hero .cards {
+    background: linear-gradient(to right, #1b4ecf, #1096fa);
+}
+
+#hero .cards .contain {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+#hero .card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#hero .info p {
+    opacity: 0.5;
+}
