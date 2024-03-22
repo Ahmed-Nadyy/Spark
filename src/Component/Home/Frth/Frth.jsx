@@ -11,7 +11,7 @@ export default function Frth() {
   return (
     <>
        <div className="Frth d-flex flex-column justify-content-center align-items-center" >
-       <div className="text-center text-derk  container ">
+       <div className="text-center text-derk  container my-5">
        <h3 className='heading-font-r mb-3'>Top <span style={{color:"#4BE5CA",fontFamily:"Rowdies"}}> Categories </span></h3>
        <p>12,000+ unique online course list designs</p>
        <div className="d-inline-block mt-5">

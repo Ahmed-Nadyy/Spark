@@ -10,7 +10,7 @@ export default function Thrd() {
   return (
     <>
     <div className="Thrd mt-5 d-flex flex-column justify-content-center align-items-center" >
-    <div className="text-center text-white  container ">
+    <div className="text-center text-white  container my-5">
       
       <h3 className='heading-font-r mb-3'>Why <span style={{color:"#4BE5CA",fontFamily:"Rowdies"}}> Learn </span>with our courses?</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod temporidunt ut labore veniam...</p>
