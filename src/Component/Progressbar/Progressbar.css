@@ -1,0 +1,24 @@
+.cpbar{
+    width: 80px;
+    
+}
+@media screen and (max-width: 992px) {
+    .cpbar{
+        width: 70px;
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cpbar{
+        width: 40px;
+        
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cpbar{
+        width: 30px;
+        
+    }
+}
