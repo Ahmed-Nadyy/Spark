@@ -2,11 +2,11 @@ import "./hero.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import Img from "../../assets/logohero.png"
-import Instructor from "../../assets/Group 10000150065.png"
-import Student from "../../assets/GGroup 1000015006.png"
-import Video from "../../assets/Group 10000150007.png"
-import User from "../../assets/Frame 67.png"
+import Img from "../../assets/khaledAssets/logohero.png";
+import Instructor from "../../assets/khaledAssets/Group 10000150065.png";
+import Student from "../../assets/khaledAssets/GGroup 1000015006.png";
+import Video from "../../assets/khaledAssets/Group 10000150007.png";
+import User from "../../assets/khaledAssets/Frame 67.png";
 
 const Hero = () => {
 

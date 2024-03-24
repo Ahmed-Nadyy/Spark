@@ -1,12 +1,12 @@
 import "./courses.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import Map from "../../assets/3d-map-pins-gps-navigator-pin-checking-poins-3d-render-illustration 1.png"
-import RedArrow from "../../assets/red-up-arrow-coin-stacks-pink-background-financial-success-growth-concept-3d-render-illustration 1.png"
-import Rocket from "../../assets/rocket-launch-laptop-flying-rocket-icon-business-startup-project-concept 1.png"
-import Travel from "../../assets/travel-concept-3d-illustration-airplane-flying-map-pin 1.png"
-import ProblemSolving from "../../assets/3d-jigsaw-puzzle-pieces-pink-background-problem-solving-business-concept-3d-render-illustration 1.png"
-import Bank from "../../assets/online-banking-icon-money-saving-bank-bundles-money-coins-floating-around-purple-background 1.png"
+import Map from "../../assets/khaledAssets/3d-map-pins-gps-navigator-pin-checking-poins-3d-render-illustration 1.png"
+import RedArrow from "../../assets/khaledAssets/red-up-arrow-coin-stacks-pink-background-financial-success-growth-concept-3d-render-illustration 1.png"
+import Rocket from "../../assets/khaledAssets/rocket-launch-laptop-flying-rocket-icon-business-startup-project-concept 1.png"
+import Travel from "../../assets/khaledAssets/travel-concept-3d-illustration-airplane-flying-map-pin 1.png"
+import ProblemSolving from "../../assets/khaledAssets/3d-jigsaw-puzzle-pieces-pink-background-problem-solving-business-concept-3d-render-illustration 1.png"
+import Bank from "../../assets/khaledAssets/online-banking-icon-money-saving-bank-bundles-money-coins-floating-around-purple-background 1.png"
 
 const Courses = () => {
 

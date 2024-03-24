@@ -1,5 +1,5 @@
 import "./header.css";
-import logo from "../../assets/flogo.png"
+import logo from "../../assets/khaledAssets/logo.png";
 import NavItems from "./NavItems";
 
 const Header = () => {
