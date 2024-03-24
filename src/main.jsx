@@ -8,8 +8,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Dashboard from './Pages/Dashboard/Dashboard.jsx';
 import { BrowserRouter } from 'react-router-dom';
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    {/* <App /> */}
-    <Dashboard/>
-  </BrowserRouter>
+  // <BrowserRouter>
+     <App /> 
+    
+  // </BrowserRouter>
 )
