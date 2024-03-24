@@ -1,0 +1,45 @@
+header .container {
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header .flex {
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  color: #2aaa94;
+}
+
+header button.login {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+header button.signup {
+  background-image: linear-gradient(to right, #1341a1 0%, #4d4cbf 50%, #7855d5 100%);
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+header .nav-items a:nth-child(1) {
+  color: #2aaa94;
+}
+
+header .nav-items,
+header .btns {
+  gap: 25px;
+}
