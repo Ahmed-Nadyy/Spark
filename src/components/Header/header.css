@@ -43,3 +43,23 @@ header .nav-items,
 header .btns {
   gap: 25px;
 }
+
+header .burger {
+  display: none;
+}
+
+.burgerIcon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+@media (max-width : 1000px) {
+  header .nav-items,
+  header .btns {
+    display: none;
+}
+  header .burger {
+    display: block;
+}
+}

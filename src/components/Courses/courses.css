@@ -74,14 +74,14 @@
 }
 
 #courses .courseCards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 30px;
 }
 
-@media (max-width: 1400px) {
-    #courses .courseCards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+@media (max-width: 767.9px) {
+    #courses p {
+        width: auto;
     }
 }
