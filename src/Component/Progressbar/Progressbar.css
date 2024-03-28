@@ -1,8 +1,8 @@
 .cpbar{
-    width: 80px;
+    width: 40%;
     
 }
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
     .cpbar{
         width: 70px;
         
@@ -21,4 +21,4 @@
         width: 30px;
         
     }
-}
+} */

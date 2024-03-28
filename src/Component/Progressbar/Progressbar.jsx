@@ -26,7 +26,7 @@ function Progressbar(props) {
     <>
       <div className="col-md-3 col-6 text-center">
         <CircularProgressbar
-          className="col-3 cpbar"
+          className=" cpbar"
           value={animationValue}
           text={`${animationText}%`}
           styles={{

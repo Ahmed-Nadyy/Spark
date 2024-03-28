@@ -6,11 +6,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 576px) {
-    width: 100%;
-  display: flex;
-  justify-content: end;
-  }
+
 `;
 
 const Form = styled.form`
@@ -20,7 +16,7 @@ const Form = styled.form`
 const Input = styled.input`
   padding: 15px 40px 15px 20px;
   width: 190px;
-  height: 55px;
+  height: 40px;
   color: #525252;
   text-transform: uppercase;
   font-size: 16px;
@@ -42,7 +38,7 @@ const Input = styled.input`
   @media screen and (max-width: 992px) {
     padding: 15px 40px 15px 20px;
   width: 150px;
-  height: 45px;
+  height: 42px;
   color: #525252;
   text-transform: uppercase;
   font-size: 14px;
@@ -87,11 +83,11 @@ const Input = styled.input`
   
   @media screen and (max-width: 576px) {
     padding: 15px 40px 15px 20px;
-    width: 130px;
+    width: 120px;
     height: 25px;
     color: #525252;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 100;
     letter-spacing: 2px;
     border: 2px solid #fff; /* Add border style here */
@@ -100,7 +96,7 @@ const Input = styled.input`
     transition: width 0.4s ease;
     outline: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+    margin-left:30px;
     &:focus {
       width: 150px;
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
