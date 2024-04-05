@@ -12,8 +12,7 @@ function Profile() {
     else{
       setcheck(false);
     }
-  };
-  
+  }; 
   window.addEventListener("resize", handleResize);
   useEffect(()=>{
     handleResize();
