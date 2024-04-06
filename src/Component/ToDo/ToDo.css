@@ -7,19 +7,19 @@
     white-space: wrap;
 }
 .txt{
-    max-width: 210px;
-    
+    max-width: 50vw;
+    width: 100%;   
 }
 .mcont{
-    max-height: 300px;
+    max-height: 650px;
     overflow-y: auto;
 }
-.btn{
+.tdbtn{
     color: #FFFFFF;
     background: linear-gradient(135deg, #040F7C, #7F56D9);
     /* transition: all 0.5s; */
 }
-.btn:hover{
+.tdbtn:hover{
     color: #FFFFFF;
     background: linear-gradient(105deg, #040F7C, #7F56D9)
 }

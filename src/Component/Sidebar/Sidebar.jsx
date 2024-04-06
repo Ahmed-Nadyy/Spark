@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import logo2 from "../../assets/stdDashboard/logo.png";
 import logo from "../../assets/stdDashboard/Frame.png";
 import pic from "../../assets/stdDashboard/WhatsApp Image 2024-02-26 at 00.13.47_cc9ce5b8.jpg";
-
+import ToDo from "../ToDo/ToDo";
 function Sidebar() {
   const [activeItem, setActiveItem] = useState("Overview");
   const [check,setcheck]=useState(false);
@@ -27,7 +27,7 @@ function Sidebar() {
          menu.style.transform = "translateX(-100%)";
          settoggle(!toggle);
       }
-       
+      setcheck(true);
     }
   };
   // const handleLogo2Click = () => {
@@ -48,7 +48,9 @@ function Sidebar() {
       setcheck(true);
     }
   };
-  
+  useEffect(()=>{
+    handleResize()
+  },[check])
   window.addEventListener("resize", handleResize);
   const handleItemClick = (itemName) => {
     setActiveItem(itemName);
@@ -85,6 +87,7 @@ function Sidebar() {
           </Link>
           </div>
         </div>
+        <ToDo/>
         </div>
         <div className="menu-group mb-auto">
           <Link

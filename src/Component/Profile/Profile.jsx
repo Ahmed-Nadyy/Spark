@@ -41,8 +41,8 @@ function Profile() {
             </Link>
           </div>
         </div>
-        {/* <div className="mb-3"></div> */}
-        <ToDo/>
+        <div className="mt-3 align-content-center justify-content-center"><ToDo/></div>
+        
       </div>
     </>
   );
