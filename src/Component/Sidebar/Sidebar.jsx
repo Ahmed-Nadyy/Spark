@@ -132,10 +132,10 @@ function Sidebar() {
             <span>Groups</span>
           </Link>
         </div>
-        <div className=" mb-3 ">
+        <div className="mb-3 ">
           <Link
             to="#"
-            className={`menu-item logout m-1 text-black ${
+            className={`menu-item m-1  ${
               activeItem === "Settings" ? "active" : ""
             } m-1`}
             onClick={() => handleItemClick("Settings")}>
