@@ -1,10 +1,10 @@
 .settingicon{
   display: none;
   color: #962dff;
-  position: absolute;
+  /* position: absolute; */
   top: 24px;
   right: 0px;
-  left: 80%;
+  /* left: 80%; */
   font-size: larger;
   cursor: pointer;
 }
@@ -110,6 +110,16 @@ main h1 {
       text-decoration: none;
         color: black;
     }
+    .logout{
+      font-size: 11px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+      
+  }
   }
   
   @media screen and (max-width: 768px) {
@@ -133,10 +143,20 @@ main h1 {
       transition: all 0.5s ease;
       z-index: 10;
     }
+    .logout{
+      font-size: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+      
+  }
   }
   @media screen and (max-width: 685px) {
     .menu-item {
-      font-size: 10px;
+      font-size: 9px;
       display: flex;
       align-items: center;
       padding: 10px 12px;
@@ -155,16 +175,16 @@ main h1 {
       transition: all 0.5s ease;
       z-index: 10;
     }
-    /* .settingicon{
-      color: #962dff;
-      display: flex;
-      position: absolute;
-      top: 24px;
-      right: 0px;
-      left: 80%;
-      font-size: larger;
-      cursor: pointer;
-    } */
+    .logout{
+      font-size: 9px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+      
+  }
 
   }
   @media screen and (max-width: 576px) {
@@ -179,7 +199,7 @@ main h1 {
       z-index: 10;
     }
     .menu-item {
-      font-size: 12px;
+      font-size: 8px;
       width: 150px;
       display: flex;
       align-items: center;
@@ -189,16 +209,16 @@ main h1 {
       text-decoration: none;
         color: black;
     }
-    /* .settingicon{
-      color: #962dff;
-      display: flex;
-      position: absolute;
-      top: 24px;
-      right: 0px;
-      left: 88%;
-      font-size: larger;
-      cursor: pointer;
-    } */
+    .logout{
+      font-size: 8px;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+      
+  }
 
   }
   

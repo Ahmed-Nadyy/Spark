@@ -56,8 +56,9 @@ function Sidebar() {
   return (
     <>
     <img className="logo position-absolute" src={logo2} alt="menu-icon" onClick={handleLogoClick}/>
-    <i className="fas fa-bars settingicon" onClick={handleLogoClick} style={{ display: check ? 'flex' : 'none' }}></i>
-
+    <div className="container col-12 position-absolute align-items-end">
+    <i className="offset-11 fas fa-bars settingicon" onClick={handleLogoClick} style={{ display: check ? 'flex' : 'none' }}></i>
+    </div>
       <div id="menu" className={`visible col-2 position-fixed`}>
         <div className="menu-header ">
           <div className="menu-btn">
@@ -131,10 +132,12 @@ function Sidebar() {
             <span>Groups</span>
           </Link>
         </div>
-        <div className="menu-group setting w-75">
+        <div className=" mb-3 ">
           <Link
             to="#"
-            className={`logout m-1 text-black`}
+            className={`menu-item logout m-1 text-black ${
+              activeItem === "Settings" ? "active" : ""
+            } m-1`}
             onClick={() => handleItemClick("Settings")}>
             <i className="fas fa-cog"></i>
             &nbsp;
