@@ -1,11 +1,4 @@
-.cont{
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-    /* width: 100%; */
-    white-space: wrap;
-}
+
 .txt{
     max-width: 50vw;
     width: 100%;   
@@ -14,12 +7,21 @@
     max-height: 650px;
     overflow-y: auto;
 }
-.tdbtn{
+.addtdbtn{
     color: #FFFFFF;
     background: linear-gradient(135deg, #040F7C, #7F56D9);
     /* transition: all 0.5s; */
 }
-.tdbtn:hover{
+.addtdbtn:hover{
     color: #FFFFFF;
     background: linear-gradient(105deg, #040F7C, #7F56D9)
+}
+.tdbtn{
+    color: #FFFFFF;
+    background-color: #962dffb6;
+    border: none;
+}
+.tdbtn:hover{
+    color: #FFFFFF;
+    background-color: #962dffb6;
 }

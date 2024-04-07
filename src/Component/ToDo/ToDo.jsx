@@ -48,14 +48,14 @@ export default function App() {
   return (
 
     <>
-    {/* <div className="container mt-3 "> */}
+    <div className=" text-center">
     {values.map((v, idx) => (
         <Button key={idx} className="tdbtn mt-3 me-2 mb-2 w-75" onClick={() => handleShow(v)}>
           ToDo
           {typeof v === 'string' && `below ${v.split('-')[0]}`}
         </Button>
       ))}
-      {/* </div> */}
+      </div>
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
         <Modal.Header closeButton>
           <Modal.Title>To Do List</Modal.Title>
@@ -80,7 +80,7 @@ export default function App() {
                   <button
                     type="submit"
                     size="md"
-                    className="ms-2 tdbtn btn"
+                    className="ms-2 addtdbtn btn"
                     onClick={handleAddTask}
                     style={{ minWidth: "auto" }} 
                   >
