@@ -1,8 +1,12 @@
-*{
+* {
   font-family: "Saira", sans-serif;
   font-weight: 400;
   font-style: normal;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 .heading-font-l {
   font-family: "Rowdies", sans-serif;
   font-weight: 300;
@@ -38,6 +42,7 @@
   font-weight: 700;
   font-style: normal;
 }
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -52,6 +57,6 @@
   border-radius: 20px;
 }
 
-  ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(105deg, #040F7C, #7F56D9);
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(105deg, #040F7C, #7F56D9);
+}

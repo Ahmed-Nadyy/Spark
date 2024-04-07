@@ -1,11 +1,11 @@
-header .container {
+header .container-k {
   justify-content: space-between;
   width: 85%;
   margin: 0 auto;
   padding: 20px 0;
 }
 
-header .flex {
+header .flex-k {
   display: flex;
   align-items: center;
 }
@@ -19,14 +19,14 @@ header a:hover {
   color: #2aaa94;
 }
 
-header button.login {
+header button.login-k {
   border: none;
   background: transparent;
   text-decoration: underline;
   cursor: pointer;
 }
 
-header button.signup {
+header button.signup-k {
   background-image: linear-gradient(to right, #1341a1 0%, #4d4cbf 50%, #7855d5 100%);
   cursor: pointer;
   border: none;
@@ -35,11 +35,84 @@ header button.signup {
   border-radius: 5px;
 }
 
-header .nav-items a:nth-child(1) {
+header .nav-items-k a:nth-child(1) {
   color: #2aaa94;
 }
 
-header .nav-items,
-header .btns {
+header .nav-items-k,
+header .btns-k {
   gap: 25px;
+}
+
+header .burger-k {
+  display: none;
+}
+
+.burgerIcon-k {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+header .mobile-k {
+  display: none;
+}
+
+@media (max-width : 1000px) {
+
+  header .nav-items-k,
+  header .btns-k {
+    display: none;
+  }
+
+  header .burger-k {
+    display: block;
+  }
+
+  header .mobile-k {
+    display: block;
+    height: calc(100vh - 83px);
+    background-color: #2aaa94;
+    padding: 50px 0;
+    animation: menu-k 1s 1;
+  }
+
+  header .mobileMenu-k {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    margin-bottom: 100px;
+  }
+
+  header .btnsMobile-k {
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  header button.signup-k {
+    width: 200px;
+  }
+
+  header a {
+    color: #ffffff;
+  }
+
+  header a:hover {
+    color: #04016c;
+  }
+}
+
+@keyframes menu-k {
+  from {
+    opacity: 0;
+    background-color: #04016c;
+    margin-right: 500px;
+  }
+
+  to {
+    opacity: 1;
+    background-color: #2aaa94;
+    margin-right: 0;
+  }
 }

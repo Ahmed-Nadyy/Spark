@@ -1,45 +1,44 @@
-#hero .container {
+#hero-k {
+    background-image: linear-gradient(to right, #04016c 0%, #0052ee 80%, #04016c 100%);
+    background-color: #04016c;
+    padding: 80px 0 0 0;
+}
+
+#hero-k .container-k {
     display: flex;
     width: 85%;
     margin: 0 auto;
     color: white;
 }
 
-#hero {
-    height: 684px;
-    background-image: linear-gradient(to right, #04016c 0%, #0052ee 80%, #04016c 100%);
-    background-color: #04016c;
-    padding: 80px 0;
-}
-
-#hero h5 {
+#hero-k h5 {
     letter-spacing: 2px;
     padding: 10px 0;
     color: #cccce1;
 }
 
-#hero .b-p {
+#hero-k .b-p-k {
     font-size: 50px;
     font-weight: 800;
     width: 480px;
     padding: 0 0 50px 0;
 }
 
-#hero span {
+#hero-k span {
     color: #2aaa94;
 }
 
-#hero .left {
+#hero-k .left-k {
     width: 50%;
 }
 
-#hero .btns {
+#hero-k .btns-k {
     display: flex;
     gap: 30px;
     padding: 0 0 50px 0;
 }
 
-#hero .heroBtn {
+#hero-k .heroBtn-k {
     background-color: transparent;
     color: white;
     padding: 15px 30px;
@@ -48,26 +47,26 @@
     cursor: pointer;
 }
 
-#hero .heroBtn2 {
+#hero-k .heroBtn2-k {
     background-color: transparent;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-#hero .search {
+#hero-k .search-k {
     position: relative;
     width: 60%;
 }
 
-#hero #search {
+#hero-k #search-k {
     padding: 20px;
     width: 100%;
     border-radius: 5px;
     border: none;
 }
 
-#hero .searchBtn {
+#hero-k .searchBtn-k {
     position: absolute;
     right: 10px;
     top: calc(50% - 18.665px);
@@ -79,7 +78,7 @@
     border-radius: 5px;
 }
 
-#hero .right {
+#hero-k .right-k {
     width: 250px;
     font-weight: 100;
     margin-top: 60px;
@@ -89,11 +88,11 @@
     position: relative;
 }
 
-#hero .img {
+#hero-k .img-k {
     height: 600px;
 }
 
-#hero .right::before {
+#hero-k .right-k::before {
     content: "“";
     position: absolute;
     width: 20px;
@@ -108,52 +107,98 @@
     border: 10px solid #0231ba;
 }
 
-#hero h4 {
+#hero-k h4 {
     font-size: 14px;
     padding-bottom: 20px;
 }
 
-#hero .text {
+#hero-k .text-k {
     font-size: 14px;
     padding-bottom: 20px;
     color: #cccce1;
 }
 
-#hero .stars {
+#hero-k .stars-k {
     font-size: 12px;
     color: #2aaa94;
 }
 
-#hero .stars span {
+#hero-k .stars-k span {
     margin-right: 10px;
 }
 
-#hero .awsomeIcons {
+#hero-k .awsomeIcons-k {
     letter-spacing: 2px;
 }
 
-#hero .cards {
+#hero-k .cards-k {
     background: linear-gradient(to right, #1b4ecf, #1096fa);
 }
 
-#hero .cards .contain {
+#hero-k .cards-k .contain-k {
     width: 85%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
-#hero .card {
+#hero-k .card-k {
     display: flex;
     align-items: center;
     gap: 20px;
     background-color: white;
     padding: 10px 20px;
     border-radius: 5px;
+    width: 200px;
 }
 
-#hero .info p {
+#hero-k .info-k p {
     opacity: 0.5;
+}
+
+@media (max-width : 1535px) {
+    #hero-k .img-k {
+        display: none;
+    }
+
+    #hero-k .container-k {
+        padding-bottom: 80px;
+        column-gap: 100px;
+    }
+
+    #hero-k {
+        background-image: unset;
+    }
+
+    #hero-k .right-k::before {
+        border: 10px solid #04016c;
+    }
+
+    #hero-k .search-k,
+    #hero-k .left-k {
+        width: auto;
+    }
+}
+
+@media (max-width : 980px) {
+    #hero-k .container-k {
+        display: block;
+    }
+
+    #hero-k .right-k {
+        display: none;
+    }
+
+    #hero-k .b-p-k {
+        width: auto;
+    }
+}
+
+@media (max-width : 550px) {
+    #hero-k .b-p-k {
+        font-size: 30px;
+    }
 }

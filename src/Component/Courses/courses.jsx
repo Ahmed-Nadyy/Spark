@@ -1,108 +1,28 @@
-import "./courses.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import Map from "../../assets/khaledAssets/3d-map-pins-gps-navigator-pin-checking-poins-3d-render-illustration 1.png"
-import RedArrow from "../../assets/khaledAssets/red-up-arrow-coin-stacks-pink-background-financial-success-growth-concept-3d-render-illustration 1.png"
-import Rocket from "../../assets/khaledAssets/rocket-launch-laptop-flying-rocket-icon-business-startup-project-concept 1.png"
-import Travel from "../../assets/khaledAssets/travel-concept-3d-illustration-airplane-flying-map-pin 1.png"
-import ProblemSolving from "../../assets/khaledAssets/3d-jigsaw-puzzle-pieces-pink-background-problem-solving-business-concept-3d-render-illustration 1.png"
-import Bank from "../../assets/khaledAssets/online-banking-icon-money-saving-bank-bundles-money-coins-floating-around-purple-background 1.png"
+import "./courses.css";
+import CourseCard from "./courseCard";
+import courses from "./coursesData";
 
 const Courses = () => {
 
     return (
-        <section id="courses">
-            <div className="container">
-                <h1>Featured <span className="h1">Course</span></h1>
+        <section id="courses-k">
+            <div className="container-k">
+                <h1>Featured <span className="h1-k">Course</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium et maxime consequuntur...</p>
-                <div className="courseCards">
-                    <div className="courseCard">
-                        <img src={Map} />
-                        <div className="cardContent">
-                            <div className="stu-time">
-                                <span className="students">5,957 Students</span>
-                                <span className="time">01h 49m</span>
-                            </div>
-                            <h2>Motion Graphics: Create a Nice Typography Animation</h2>
-                            <div className="price-buy">
-                                <span className="price">$33.99</span>
-                                <span className="cart"><FontAwesomeIcon icon={faShoppingCart} /></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="courseCard">
-                        <img src={RedArrow} />
-                        <div className="cardContent">
-                            <div className="stu-time">
-                                <span className="students">5,957 Students</span>
-                                <span className="time">01h 49m</span>
-                            </div>
-                            <h2>The Complete Financial Analyst Training & Investing</h2>
-                            <div className="price-buy">
-                                <span className="price">$45.99</span>
-                                <span className="cart"><FontAwesomeIcon icon={faShoppingCart} /></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="courseCard">
-                        <img src={Rocket} />
-                        <div className="cardContent">
-                            <div className="stu-time">
-                                <span className="students">5,957 Students</span>
-                                <span className="time">01h 49m</span>
-                            </div>
-                            <h2>Education Software and PHP and JS System Script</h2>
-                            <div className="price-buy">
-                                <span className="price">$33.99</span>
-                                <span className="cart"><FontAwesomeIcon icon={faShoppingCart} /></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="courseCard">
-                        <img src={Travel} />
-                        <div className="cardContent">
-                            <div className="stu-time">
-                                <span className="students">5,957 Students</span>
-                                <span className="time">01h 49m</span>
-                            </div>
-                            <h2>Marketing 2023: Complete Guide To Instagram Growth</h2>
-                            <div className="price-buy">
-                                <span className="price">$33.99</span>
-                                <span className="cart"><FontAwesomeIcon icon={faShoppingCart} /></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="courseCard">
-                        <img src={ProblemSolving} />
-                        <div className="cardContent">
-                            <div className="stu-time">
-                                <span className="students">5,957 Students</span>
-                                <span className="time">01h 49m</span>
-                            </div>
-                            <h2>Advance PHP knowledge with JS to make smart web</h2>
-                            <div className="price-buy">
-                                <span className="price">$33.99</span>
-                                <span className="cart"><FontAwesomeIcon icon={faShoppingCart} /></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="courseCard">
-                        <img src={Bank} />
-                        <div className="cardContent">
-                            <div className="stu-time">
-                                <span className="students">5,957 Students</span>
-                                <span className="time">01h 49m</span>
-                            </div>
-                            <h2>Learn 3D Modelling and Design for Beginners</h2>
-                            <div className="price-buy">
-                                <span className="price">$33.99</span>
-                                <span className="cart"><FontAwesomeIcon icon={faShoppingCart} /></span>
-                            </div>
-                        </div>
-                    </div>
+                <div className="courseCards-k">
+                    {courses.map(({ imgPath, studentNumber, courseTime, courseName, coursePrice }, index) => (
+                        <CourseCard
+                            key={index}
+                            imgPath={imgPath}
+                            studentNumber={studentNumber}
+                            courseTime={courseTime}
+                            courseName={courseName}
+                            coursePrice={coursePrice}
+                        />
+                    ))}
                 </div>
-                <div className="btnCourseDiv">
-                    <button className="btnCourse">Explore Courses</button>
+                <div className="btnCourseDiv-k">
+                    <button className="btnCourse-k">Explore Courses</button>
                 </div>
             </div>
         </section>
