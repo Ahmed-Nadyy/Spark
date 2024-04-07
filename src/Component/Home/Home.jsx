@@ -7,17 +7,21 @@ import Frth from './Frth/Frth'
 import Courses from '../Courses/courses'
 import Hero from '../Hero/Hero'
 import Header from '../Header/Header'
+import Parent from '../lastpart/Parent';
+import Footer from '../lastpart/Parent';
 
 export default function Home() {
   return (
     <>
       {/* <header /> */}
-      {/* <Header />
+      <Header />
       <Hero />
       <Courses />
       <Thrd />
-      <Frth /> */}
-      <Dashboard/>
+      <Frth />
+      <Parent />
+      <Footer/>
+      {/* <Dashboard/> */}
      
     </>
   )

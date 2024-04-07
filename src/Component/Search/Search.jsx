@@ -19,8 +19,8 @@ const Form = styled.form`
 
 const Input = styled.input`
   padding: 15px 40px 15px 20px;
-  width: 190px;
-  height: 55px;
+  width: 90vh;
+  height: 40px;
   color: #525252;
   text-transform: uppercase;
   font-size: 16px;
@@ -33,15 +33,15 @@ const Input = styled.input`
   outline: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  &:focus {
-    width: 490px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    border-color: #962DFF; /* Change border color on focus if needed */
-  }
+  // &:focus {
+  //   width: 490px;
+  //   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  //   border-color: #962DFF; /* Change border color on focus if needed */
+  // }
 
   @media screen and (max-width: 992px) {
     padding: 15px 40px 15px 20px;
-  width: 150px;
+  width: 60vh;
   height: 45px;
   color: #525252;
   text-transform: uppercase;
@@ -55,16 +55,16 @@ const Input = styled.input`
   outline: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  &:focus {
-    width: 360px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    border-color: #962DFF; /* Change border color on focus if needed */
-  }
+  // &:focus {
+  //   width: 360px;
+  //   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  //   border-color: #962DFF; /* Change border color on focus if needed */
+  // }
   }
   
   @media screen and (max-width: 768px) {
     padding: 15px 40px 15px 20px;
-    width: 140px;
+    width: 50vh;
     height: 35px;
     color: #525252;
     text-transform: uppercase;
@@ -78,16 +78,16 @@ const Input = styled.input`
     outline: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   
-    &:focus {
-      width: 260px;
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-      border-color: #962DFF; /* Change border color on focus if needed */
-    }
+  //   &:focus {
+  //     width: 260px;
+  //     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  //     border-color: #962DFF; /* Change border color on focus if needed */
+  //   }
   }
   
   @media screen and (max-width: 576px) {
     padding: 15px 40px 15px 20px;
-    width: 130px;
+    width: 40vh;
     height: 25px;
     color: #525252;
     text-transform: uppercase;
@@ -101,11 +101,11 @@ const Input = styled.input`
     outline: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   
-    &:focus {
-      width: 150px;
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-      border-color: #962DFF; /* Change border color on focus if needed */
-    }
+  //   &:focus {
+  //     width: 150px;
+  //     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  //     border-color: #962DFF; /* Change border color on focus if needed */
+  //   }
   }
 `;
 const SearchButton = styled.button`
