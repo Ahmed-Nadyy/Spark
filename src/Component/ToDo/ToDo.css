@@ -21,7 +21,7 @@
     background-color: #962dffb6;
     border: none;
 }
-.tdbtn:hover{
+.tdbtn:hover:only-of-type{
     color: #FFFFFF;
     background-color: #962dffb6;
 }

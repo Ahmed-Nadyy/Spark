@@ -21,7 +21,7 @@ function Dashmid() {
   },[]);
   return (
     <>
-      <div className={`${check?"col-6 col-lg-7 offset-3 offset-lg-2":"col-12"} `}>
+      <div className={`${check?"col-6 col-lg-7 offset-3 offset-lg-2":"col-12"} `}>  
         <div className="w-100 text-center">
           <Search />
         </div>
