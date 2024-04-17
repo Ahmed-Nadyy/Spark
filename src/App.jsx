@@ -2,6 +2,8 @@ import './App.css'
 import Home from './Component/Home/Home.jsx'
 import { createBrowserRouter,RouterProvider  } from 'react-router-dom';
 import HomeLayout from './Layouts/HomeLayout/HomeLayout.jsx';
+import { Provider } from 'react-redux';
+import { Store } from './Redux/Store.jsx';
 function App() {
 
   const routes = createBrowserRouter([{
@@ -17,7 +19,9 @@ function App() {
 
   return (
     <>
+      <Provider store={Store}>
         <RouterProvider router={routes} /> 
+      </Provider>
     </>
   )
 }
