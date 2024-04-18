@@ -1,15 +1,13 @@
-import React from "react";
 import img1 from "./IMG&ICN/1.png";
 export default function Children1() {
   return (
     <>
         <div className="container">
-          <div className="row d-flex justify-content-center align-items-center mb-5 ">
-            <div className="col-4">
+          <div className="a-div d-flex justify-content-center align-items-center mb-5 ">
+            <div className="a-width col-4">
               <img src={img1} className="w-75" />
             </div>
-
-            <div className="col-6">
+            <div className="a-width col-6">
               <h1 className="heading-font-r">
                 <span style={{ color: "#1D1D45" }}>
                   We are Always Ensure Best

@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "./IMG&ICN/logoFooter.png";
 import call from "./IMG&ICN/call.png";
 import msg from "./IMG&ICN/msg.png";
@@ -72,8 +71,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="line"></div>
-        <div className="container">
+        <div className="line-a"></div>
+        <div className="container-a">
           <p className=".font-two-l Copyrightp text-white">
             Copyright 2024 | All Rights Reserved
           </p>

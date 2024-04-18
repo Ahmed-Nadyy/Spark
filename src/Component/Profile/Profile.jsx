@@ -12,15 +12,14 @@ function Profile() {
     else{
       setcheck(false);
     }
-  };
-  
+  }; 
   window.addEventListener("resize", handleResize);
   useEffect(()=>{
     handleResize();
   },[]);
   return (
     <>
-      <div className={`${check?"col-sm-3 offset-sm-9":"col-5 offset-7"} position-fixed position-relative`}>
+      <div className={`${check?"col-sm-3 offset-sm-9":"col-5 offset-7"} position-fixed position-relative`} style={{ display: check ? 'block' : 'none' }}>
         <div className="d-flex justify-content-between align-items-center top-0">
           <b>Profile</b>
           <Link className="text-decoration-none text-black">
@@ -42,8 +41,8 @@ function Profile() {
             </Link>
           </div>
         </div>
-        <div className="mb-3"></div>
-        <ToDo/>
+        <div className="mt-3 align-content-center justify-content-center"><ToDo/></div>
+        
       </div>
     </>
   );

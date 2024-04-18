@@ -105,6 +105,7 @@
     align-items: center;
     justify-content: center;
     border: 10px solid #0231ba;
+    box-sizing: content-box !important;
 }
 
 #hero-k h4 {

@@ -6,11 +6,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (max-width: 576px) {
-    width: 100%;
-  display: flex;
-  justify-content: end;
-  }
+
 `;
 
 const Form = styled.form`
@@ -19,7 +15,7 @@ const Form = styled.form`
 
 const Input = styled.input`
   padding: 15px 40px 15px 20px;
-  width: 90vh;
+  width: 190px;
   height: 40px;
   color: #525252;
   text-transform: uppercase;
@@ -33,16 +29,16 @@ const Input = styled.input`
   outline: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  // &:focus {
-  //   width: 490px;
-  //   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  //   border-color: #962DFF; /* Change border color on focus if needed */
-  // }
+  &:focus {
+    width: 490px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    border-color: #962DFF; /* Change border color on focus if needed */
+  }
 
   @media screen and (max-width: 992px) {
     padding: 15px 40px 15px 20px;
-  width: 60vh;
-  height: 45px;
+  width: 150px;
+  height: 42px;
   color: #525252;
   text-transform: uppercase;
   font-size: 14px;
@@ -55,16 +51,16 @@ const Input = styled.input`
   outline: none;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  // &:focus {
-  //   width: 360px;
-  //   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  //   border-color: #962DFF; /* Change border color on focus if needed */
-  // }
+  &:focus {
+    width: 360px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    border-color: #962DFF; /* Change border color on focus if needed */
+  }
   }
   
   @media screen and (max-width: 768px) {
     padding: 15px 40px 15px 20px;
-    width: 50vh;
+    width: 140px;
     height: 35px;
     color: #525252;
     text-transform: uppercase;
@@ -78,20 +74,20 @@ const Input = styled.input`
     outline: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   
-  //   &:focus {
-  //     width: 260px;
-  //     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  //     border-color: #962DFF; /* Change border color on focus if needed */
-  //   }
+    &:focus {
+      width: 260px;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+      border-color: #962DFF; /* Change border color on focus if needed */
+    }
   }
   
   @media screen and (max-width: 576px) {
     padding: 15px 40px 15px 20px;
-    width: 40vh;
+    width: 120px;
     height: 25px;
     color: #525252;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 100;
     letter-spacing: 2px;
     border: 2px solid #fff; /* Add border style here */
@@ -100,12 +96,12 @@ const Input = styled.input`
     transition: width 0.4s ease;
     outline: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-  //   &:focus {
-  //     width: 150px;
-  //     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  //     border-color: #962DFF; /* Change border color on focus if needed */
-  //   }
+    margin-left:30px;
+    &:focus {
+      width: 150px;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+      border-color: #962DFF; /* Change border color on focus if needed */
+    }
   }
 `;
 const SearchButton = styled.button`

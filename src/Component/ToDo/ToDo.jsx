@@ -13,8 +13,19 @@ import {
   MDBTextArea,
   MDBTooltip,
 } from "mdb-react-ui-kit";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import "./ToDo.css"
 export default function App() {
+  // , 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'
+  const values = [true];
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
+  function handleShow(breakpoint) {
+    setFullscreen(breakpoint);
+    setShow(true);
+  }
   const [tasks, setTasks] = useState([]);
   const [newTaskText, setNewTaskText] = useState("");
 
@@ -35,13 +46,28 @@ export default function App() {
   };
 
   return (
-    <section className="">
+
+    <>
+    <div className=" text-center">
+    {values.map((v, idx) => (
+        <Button key={idx} className="tdbtn mt-3 me-2 mb-2 w-75" onClick={() => handleShow(v)}>
+          ToDo
+          {typeof v === 'string' && `below ${v.split('-')[0]}`}
+        </Button>
+      ))}
+      </div>
+      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>To Do List</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <section className="">
       <MDBContainer className="py-3 mcont">
         <MDBRow className="d-flex justify-content-center align-items-center">
           <MDBCol xl="12">
             <MDBCard style={{ borderRadius: "15px" }}>
               <MDBCardBody className="p-1">
-                <h6 className="mb-0 text-center">Todo List</h6>
+                {/* <h6 className="mb-0 text-center">Todo List</h6> */}
                 <div className="d-flex justify-content-center align-items-center mb-0">
                   <MDBTextArea
                     label="What do you need to do today?"
@@ -49,12 +75,12 @@ export default function App() {
                     rows={2}
                     value={newTaskText}
                     onChange={(e) => setNewTaskText(e.target.value)}
-                    className="flex-fill mt-4"
+                    className="flex-fill mt-2"
                   />
                   <button
                     type="submit"
                     size="md"
-                    className="ms-2 btn"
+                    className="ms-2 addtdbtn btn"
                     onClick={handleAddTask}
                     style={{ minWidth: "auto" }} 
                   >
@@ -106,5 +132,9 @@ export default function App() {
         </MDBRow>
       </MDBContainer>
     </section>
+        </Modal.Body>
+      </Modal>
+    </>
+   
   );
 }

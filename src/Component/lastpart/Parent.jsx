@@ -1,4 +1,3 @@
-import React from "react";
 import Children1 from "./Children1";
 import Children2 from "./Children2";
 import Children3 from "./Children3";

@@ -1,4 +1,3 @@
-import React from 'react';
 import linee from './img/Line15.png';
 import icon1 from './img/Icon1.png';
 import icon2 from './img/Icon2.png';
@@ -9,7 +8,7 @@ import './Thrd.css'
 export default function Thrd() {
   return (
     <>
-    <div className="Thrd mt-5 d-flex flex-column justify-content-center align-items-center" >
+    <div className="Thrd d-flex flex-column justify-content-center align-items-center" >
     <div className="text-center text-white  container my-5">
       
       <h3 className='heading-font-r mb-3'>Why <span style={{color:"#4BE5CA",fontFamily:"Rowdies"}}> Learn </span>with our courses?</h3>

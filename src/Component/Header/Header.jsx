@@ -1,9 +1,15 @@
 import { useState } from "react";
 import "./header.css";
 import logo from "../../assets/khaledAssets/flogo.png";
-import NavItems from "./NavItems";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {Link} from"react-router-dom"
+
+const NavItems = (props) => {
+    return (
+        <Link to={props.link}>{props.itemName}</Link>
+    )
+}
 
 const Header = () => {
 
@@ -20,12 +26,12 @@ const Header = () => {
           <img width="65%" src={logo} />
         </div>
         <div className="nav-items-k flex-k">
-          <NavItems itemName="Home" />
-          <NavItems itemName="Courses" />
-          <NavItems itemName="Blog" />
-          <NavItems itemName="Events" />
-          <NavItems itemName="Monitors" />
-          <NavItems itemName="Testimonials" />
+          <NavItems link={"/"} itemName="Home" />
+          <NavItems link={"/courses"} itemName="Courses" />
+          <NavItems link={"/dashboard"} itemName="Blog" />
+          <NavItems link={"/Events"} itemName="Events" />
+          <NavItems link={"/Monitors"} itemName="Monitors" />
+          <NavItems link={"/Testimonials"} itemName="Testimonials" />
         </div>
         <div className="burger-k">
           <FontAwesomeIcon icon={mobileMenu ? faTimes : faBars} className="burgerIcon-k" onClick={toggle} />
@@ -39,12 +45,12 @@ const Header = () => {
         <div className="mobile-k">
           <div className="container-k">
             <div className="mobileMenu-k" >
-              <NavItems itemName="Home" />
-              <NavItems itemName="Courses" />
-              <NavItems itemName="Blog" />
-              <NavItems itemName="Events" />
-              <NavItems itemName="Monitors" />
-              <NavItems itemName="Testimonials" />
+              <NavItems link={"/"} itemName="Home" />
+              <NavItems link={"/courses"} itemName="Courses" />
+              <NavItems link={"/dashboard"} itemName="Blog" />
+              <NavItems link={"/Events"} itemName="Events" />
+              <NavItems link={"/Monitors"} itemName="Monitors" />
+              <NavItems link={"/Testimonials"} itemName="Testimonials" />
             </div>
             <div className="btnsMobile-k">
               <button className="signup-k">Login</button>

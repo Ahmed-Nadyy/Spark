@@ -22,11 +22,12 @@ function Progressbar(props) {
     return () => clearInterval(timer);
   }, []);
 
+  
   return (
     <>
-      <div className="col-md-3 col-6 text-center">
+      <div className="col-md-3 col-6 text-center w-25">
         <CircularProgressbar
-          className="col-3 cpbar"
+          className=" cpbar"
           value={animationValue}
           text={`${animationText}%`}
           styles={{
@@ -41,10 +42,11 @@ function Progressbar(props) {
             },
             text: {
               fill: `${props.color}`,
+              fontSize: '14px',
             },
           }}
         />
-        <p>{props.text}</p>
+        <p className="pbdes">{props.text}</p>
       </div>
     </>
   );

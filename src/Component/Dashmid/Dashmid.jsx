@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Search from "../Search/Search";
 import "./Dashmid.css";
 import { Link } from "react-router-dom";
 import CourseCard from "../CourseCard/CourseCard";
 import Progressbar from "../Progressbar/Progressbar";
+// import CourseCard from "../CourseCard/CourseCard";
+
 function Dashmid() {
   const [check,setcheck]=useState(true)
   const handleResize = () => {
@@ -21,7 +23,7 @@ function Dashmid() {
   },[]);
   return (
     <>
-      <div className={`${check?"col-6 col-lg-7 offset-3 offset-lg-2":"col-7"} `}>
+      <div className={`${check?"col-6 col-lg-7 offset-3 offset-lg-2":"col-12"} `}>  
         <div className="w-100 text-center">
           <Search />
         </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import pic from "../../assets/stdDashboard/WhatsApp Image 2024-02-26 at 00.13.47_cc9ce5b8.jpg";
 import "./CourceCard.css";
 import { Link } from "react-router-dom";
