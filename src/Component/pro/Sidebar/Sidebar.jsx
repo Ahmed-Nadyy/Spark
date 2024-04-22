@@ -108,7 +108,7 @@ function Sidebar() {
             <span>Tasks</span>
           </Link>
           <Link
-            to="/courses"
+            to="#"
             className={`menu-item ${activeItem === "MyCourses" ? "active" : ""
               } m-1`}
             onClick={() => handleItemClick("MyCourses")}

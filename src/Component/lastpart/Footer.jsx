@@ -4,11 +4,14 @@ import msg from "./IMG&ICN/msg.png";
 import loction from "./IMG&ICN/loction.png";
 import social from "./IMG&ICN/social.png";
 import "./Footer.css";
+import { Link  } from "react-router-dom";
 
 export default function Footer() {
   return (
     <>
-      <div className="footer">
+      
+      {/* <div className="col-3"></div> */}
+      <div className="footer ">
         <div className="container-fluid text-white py-5 ">
           <div className="row m-2">
             <div className="col-md-4 ml-3">
@@ -28,10 +31,15 @@ export default function Footer() {
             <div className="col-md-3 m-3 underline">
               <h3 className=".heading-font-b">Quick Links</h3>
               <ul className="list-unstyled mt-4">
-                <li>About</li>
-                <li>Blog</li>
-                <li>Contact</li>
-                <li>Course</li>
+                <Link to="./Home">
+                  <li>Home</li>
+                </Link>
+                <Link to="./Courses">
+                  <li>Courses</li>
+                </Link>
+                <Link to="./Dashboard">
+                  <li>Dashboard</li>
+                </Link>
               </ul>
             </div>
             <div className="col-md-4 underline m-3">
@@ -79,6 +87,8 @@ export default function Footer() {
           <img src={social} alt="" className="socialICON" />
         </div>
       </div>
+      {/* <div className="col-3"></div> */}
+
     </>
   );
 }

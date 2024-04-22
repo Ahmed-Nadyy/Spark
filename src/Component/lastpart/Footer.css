@@ -1,8 +1,14 @@
 .footer {
   background: linear-gradient(to right, #331da8, #865aef);
-
-  width: 100%;
+  position: relative;
+  bottom: 0;
+  /* width: 100%; */
   height: auto;
+  z-index: 10;
+  position: relative;
+  /* left:50%; */
+  /* transform: translateX(-57.5%); */
+  border-radius: 10px;
 }
 
 .underline ul li {

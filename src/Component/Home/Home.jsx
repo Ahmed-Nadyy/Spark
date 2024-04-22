@@ -5,18 +5,15 @@ import Courses from '../Courses/courses'
 import Thrd from './3rd/Thrd'
 import Frth from './Frth/Frth'
 import Parent from '../lastpart/Parent';
-import Footer from '../lastpart/Footer';
 
 export default function Home() {
   return (
     <>
-      <Header />
       <Hero />
       <Courses />
       <Thrd />
       <Frth />
       <Parent />
-      <Footer />
     </>
   )
 }
