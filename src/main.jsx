@@ -16,6 +16,8 @@ import LayoutAuth from "./Layouts/LayoutAuth.jsx";
 import ParentCourese from "./Component/MyCourses/ParentCourese.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
 import Home from "./Component/Home/Home.jsx";
+import TeacherDashboard from "./Pages/TeacherDashboard/TeacherDashboard.jsx";
+import CourseUploadForm from "./Component/uplaodCourse/CourseUploadForm.jsx";
 
 let routers = createBrowserRouter([
   {
@@ -29,7 +31,16 @@ let routers = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "Home", element: <Home /> },
       { path: "Courses", element: <ParentCourese /> },
-      { path: "Dashboard", element: <Dashboard /> },
+      // { path: "Dashboard", element: <Dashboard /> },
+      { path: "Dashboard", element: <TeacherDashboard /> },
+      // { 
+      //   path: "Dashboard",
+      //   element: <TeacherDashboard />,
+      //   children: [
+      //     { path: "add-course", element: <CourseUploadForm  /> },
+      //   ],
+      //  },
+      { path: "add-course", element: <CourseUploadForm /> },
       { path: "*", element: <ErrorPage /> },
     ],
   },

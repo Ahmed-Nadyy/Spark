@@ -21,6 +21,19 @@
     margin-top: 30px;
 }
 
+.join-teacher {
+    /* position: absolute; */
+    background-color: #202020;
+    color: white;
+    margin-left: 22px;
+    /* margin-top: 65px; */
+    border-radius: 20px;
+    font-size: small;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
 .join {
     position: absolute;
     background-color: #202020;
