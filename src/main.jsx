@@ -16,6 +16,7 @@ import Dash from './Pages/dash/Dash';
 import Home from './Component/Home/Home';
 import TeacherDashboard from './Pages/TeacherDashboard/TeacherDashboard';
 import CourseUploadForm from './Component/uplaodCourse/CourseUploadForm';
+import EditProfile from './Component/EditProfile/EditProfile';
 
 const routers = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const routers = createBrowserRouter([
       { path: 'Home', element: <Home /> },
       { path: 'Courses', element: <ParentCourese /> },
       { path: 'Dashboard', element: <Dash /> },
+      { path: 'editProfile', element: <EditProfile /> },
       // { path: "Dashboard", element: <TeacherDashboard /> },
       { path: 'add-course', element: <CourseUploadForm /> },
       { path: '*', element: <ErrorPage /> },
@@ -38,11 +40,8 @@ const routers = createBrowserRouter([
   {
     path: '/',
     
-    element:(
-    <ProtectedRoutes>
+    element:
     <LayoutAuth />,
-    </ProtectedRoutes>
-    ),
     children: [
       { index: true, element: <Register /> },
       { path: 'signup', element: <Register /> },

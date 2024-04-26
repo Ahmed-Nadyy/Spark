@@ -27,7 +27,7 @@ function Profile() {
       <div className={`${check?"col-2 ":"col-5"} position-relative`} style={{ display: check ? 'block' : 'none' }}>
         <div className="d-flex justify-content-between align-items-center top-0">
           <b>Profile</b>
-          <Link className="text-decoration-none text-black">
+          <Link to='/editProfile' className="text-decoration-none text-black">
             <i className="fa-solid fa-pen-to-square" />
           </Link>
         </div>

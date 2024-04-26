@@ -127,8 +127,6 @@ function Sidebar() {
             &nbsp;
             <span>Groups</span>
           </Link>
-        </div>
-        <div className="mb-3 ">
           <Link
             to="#"
             className={`menu-item m-1  ${activeItem === "Settings" ? "active" : ""
@@ -138,11 +136,9 @@ function Sidebar() {
             &nbsp;
             <span>Settings</span>
           </Link>
-          <Link to="/signin" className=" logout m-1" style={{ color: "red" }}>
-            <i className="fas fa-sign-out-alt"></i>
-            &nbsp;
-            <span>Logout</span>
-          </Link>
+        </div>
+        <div className="mb-3 ">
+          
         </div>
       </div>
     </>
