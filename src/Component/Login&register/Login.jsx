@@ -1,25 +1,58 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useDispatch,useSelector  } from 'react-redux';
+import { loginSuccess,isStudent,isTeacher,setName } from '../../Redux/authSlice';
+import { useNavigate } from 'react-router-dom'; 
+import axios from "axios";
 import img from "./LoginArt.png";
 import iconGoogle from "./Google.png";
 import iconFacebook from "./Facebook.png";
-import "./Login.css"
+import "./Login.css";
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const dispatch = useDispatch();
+  
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (username.trim() === "" || password.trim() === "") {
       setError("Please enter both username and password.");
       return;
     }
-    // Add authentication logic here
-    setError(""); // Clear any previous errors
-    console.log("Username:", username);
-    console.log("Password:", password);
+    try {
+      // Make a POST request to the authentication endpoint
+      const response = await axios.post(
+        'https://edume-app-88352f017fde.herokuapp.com/auth/login',
+        { username, password }
+      );
+      // Handle successful login
+      console.log("Login successful:", response.data);
+      console.log("role:", response.data.role);
+      if(response.data.role==='student') {
+        dispatch(isStudent());
+      }else {
+        dispatch(isTeacher());
+      }
+      let name = response.data.firstName + " " + response.data.lastName;
+      dispatch(setName(name));
+      
+      dispatch(loginSuccess());
+      navigate('/Home');
+      
+    } catch (error) {
+      // Handle login error
+      console.error("Login error:", error);
+      setError("Invalid username or password. Please try again.");
+    }
   };
+
+  // if (isLoggedIn) {
+  //   return <Navigate to="/Home" />;
+  // }
 
   return (
     <div className="container-fluid">
@@ -102,12 +135,11 @@ export default function Login() {
               Sign in with Facebook
             </button>
             <p className="text-center">
-              Dont have an account?{" "}
+              Don't have an account?{" "}
               <a href="#" className="signup-link">
                 Sign up
               </a>
             </p>
-
           </form>
         </div>
         <div className="Login-Img col-md-5 m-0 p-0 d-flex justify-content-center">

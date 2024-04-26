@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
+// import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import pic from "../../assets/stdDashboard/WhatsApp Image 2024-02-26 at 00.13.47_cc9ce5b8.jpg";
 import "./Profile.css";
 import ToDo from "../ToDo/ToDo";
+import { useSelector } from "react-redux";
 function Profile() {
   const [check,setcheck]=useState(false);
+  const firstName = useSelector((state) => state.auth.firstName);
+  
   const handleResize = () => {
     if (window.innerWidth > 685) {
       setcheck(true);
@@ -16,6 +20,7 @@ function Profile() {
   window.addEventListener("resize", handleResize);
   useEffect(()=>{
     handleResize();
+    console.log(firstName);
   },[]);
   return (
     <>
@@ -29,7 +34,7 @@ function Profile() {
         <div className="text-center w-100 mt-5">
           <div className="profile mt-4 mx-auto"><img className="imag" src={pic} alt="" /></div>
           <div className="mt-2">
-            <b>good Morning Prashant</b>
+            <b>good Morning <span>{firstName}</span></b>
           </div>
           <div className="opacity-75 im-txt">
             continue your journey and achieve Your Target
