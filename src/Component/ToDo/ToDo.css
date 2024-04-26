@@ -18,10 +18,10 @@
 }
 .tdbtn{
     color: #FFFFFF;
-    background-color: #962dffb6;
+    background-color: #7550d1;
     border: none;
 }
 .tdbtn:hover:only-of-type{
     color: #FFFFFF;
-    background-color: #962dffb6;
+    background-color: #141888;
 }

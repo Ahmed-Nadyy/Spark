@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from 'axios';
 import "./header.css";
+import { useSelector,useDispatch  } from 'react-redux';
+import { logoutSuccess } from '../../Redux/authSlice';
 import logo from "../../assets/khaledAssets/flogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +13,17 @@ const NavItems = (props) => {
 };
 
 const Header = (props) => {
+
   const [mobileMenu, setMobileMenu] = useState(false);
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const dispatch = useDispatch();
+
+
+  const handleLogout=()=>{
+    dispatch(logoutSuccess());
+  }
+  
+
   const toggle = () => {
     setMobileMenu(!mobileMenu);
   };
@@ -21,15 +34,21 @@ const Header = (props) => {
         <div className="logo-k">
           <img width="65%" src={logo} alt="Logo" />
         </div>
-        {props.sign ? (
-          <></>
-        ) : (
+       
+      
+            {isLoggedIn? (
           <div className="nav-items-k flex-k">
-            <NavItems link={"/Home"} itemName="Home" />
-            <NavItems link={"/courses"} itemName="Courses" />
-            <NavItems link={"/dashboard"} itemName="Dashboard" />
+           
+                <NavItems link={"/Home"} itemName="Home" />
+                <NavItems link={"/courses"} itemName="Courses" />
+                <NavItems link={"/dashboard"} itemName="Dashboard" />
           </div>
-        )}
+              ) : (
+                <div className="nav-items-k flex-k">
+                <NavItems link={"/Home"} itemName="Home" />
+                </div>
+                )}
+        
         <div className="burger-k">
           <FontAwesomeIcon
             icon={mobileMenu ? faTimes : faBars}
@@ -37,7 +56,15 @@ const Header = (props) => {
             onClick={toggle}
           />
         </div>
-        {props.sign ? (
+        {isLoggedIn ? (
+          <div className="btns-k flex-k">
+            <NavLink to="./Home"
+            onClick={handleLogout}
+            >
+              <button className="signup-k">Logout</button>
+            </NavLink>
+          </div>
+        ) : (
           <div className="btns-k flex-k">
             <NavLink to="./signin">
               <button className="login-k">Login</button>
@@ -46,40 +73,27 @@ const Header = (props) => {
               <button className="signup-k">Signup</button>
             </NavLink>
           </div>
-        ) : (
-          <div className="btns-k flex-k">
-            <NavLink to="./signin">
-              <button className="signup-k">Log out</button>
-            </NavLink>
-          </div>
         )}
       </div>
       {mobileMenu && (
         <div className="mobile-k">
           <div className="container-k">
             <div className="btnsMobile-k">
-              {props.sign ? (
+              {isLoggedIn ? (
+                <>
+                  <NavLink to="./Home"
+                  onClick={handleLogout}
+                  >
+                    <button className="signup-k">Logout</button>
+                  </NavLink>
+                </>
+              ) : (
                 <>
                   <NavLink to="./Signup">
                     <button className="signup-k">Signup</button>
                   </NavLink>
                   <NavLink to="./signin">
                     <button className="signup-k">Login</button>
-                  </NavLink>
-                </>
-              ) : (
-                <>
-                  <NavLink to="./home">
-                    <button className="signup-k">Home</button>
-                  </NavLink>
-                  <NavLink to="./Courses">
-                    <button className="signup-k">Courses</button>
-                  </NavLink>
-                  <NavLink to="./Dashboard">
-                    <button className="signup-k">Dashboard</button>
-                  </NavLink>
-                  <NavLink to="./signin">
-                    <button className="signup-k">Logout</button>
                   </NavLink>
                 </>
               )}
