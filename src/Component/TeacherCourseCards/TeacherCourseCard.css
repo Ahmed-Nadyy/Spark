@@ -1,0 +1,17 @@
+.square-card {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    padding-top: 100%; /* 1:1 aspect ratio */
+  }
+  
+  .card-img-container {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  

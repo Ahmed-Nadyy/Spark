@@ -1,0 +1,27 @@
+
+.txt{
+    max-width: 50vw;
+    width: 100%;   
+}
+.mcont{
+    max-height: 650px;
+    overflow-y: auto;
+}
+.addtdbtn{
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #040F7C, #7F56D9);
+    /* transition: all 0.5s; */
+}
+.addtdbtn:hover{
+    color: #FFFFFF;
+    background: linear-gradient(105deg, #040F7C, #7F56D9)
+}
+.tdbtn{
+    color: #FFFFFF;
+    background-color: #7550d1;
+    border: none;
+}
+.tdbtn:hover:only-of-type{
+    color: #FFFFFF;
+    background-color: #141888;
+}

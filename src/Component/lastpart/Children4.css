@@ -1,0 +1,26 @@
+.img-icon {
+  width: 40px;
+  height: 45px;
+  border: none;
+  border-radius: 50px;
+  margin-top: -15px;
+}
+.h-name{
+  color: #1D1D45;
+  margin-left: 20px;
+}
+
+.a-cards {
+  width: 300px !important;
+}
+
+@media (max-width: 767.9px) {
+  .a-div {
+    display: block !important;
+    text-align: center;
+  }
+  
+  .a-width {
+    width: auto !important;
+  }
+}

@@ -1,0 +1,6 @@
+@media (max-width: 767.9px) {
+    .Login-Img,
+    .Register-Img {
+        display: none !important;
+    }
+}
