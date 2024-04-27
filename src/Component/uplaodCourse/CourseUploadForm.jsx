@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
-import { Link  } from "react-router-dom";
-// import { useHistory } from 'react-router-dom';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 
 
 const CourseUploadForm = () => {
-  const [courses, setCourses] = useState([]);
   const [courseName, setCourseName] = useState('');
   const [courseDescription, setCourseDescription] = useState('');
   const [courseCardPicture, setCourseCardPicture] = useState(null);
   const [lessons, setLessons] = useState([{ name: '', videos: [] }]);
   const [price, setPrice] = useState('');
   const [isFree, setIsFree] = useState(false);
+  const navigate = useNavigate();
 
-  // const history = useHistory();
-
-  const addCourse = (courseData) => {
-    setCourses([...courses, courseData]);
-  };
-  
   const handleAddLesson = () => {
     setLessons([...lessons, { name: '', videos: [] }]);
   };
@@ -28,9 +23,9 @@ const CourseUploadForm = () => {
     setLessons(newLessons);
   };
 
-  const handleAddVideo = (lessonIndex, video) => {
+  const handleAddVideo = (lessonIndex, files) => {
     const newLessons = [...lessons];
-    newLessons[lessonIndex].videos.push(video);
+    newLessons[lessonIndex].videos = files;
     setLessons(newLessons);
   };
 
@@ -39,30 +34,42 @@ const CourseUploadForm = () => {
     setCourseCardPicture(file);
   };
 
-  const handleSubmit = (event) => {
-    // console.log(courses);
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const courseData = {
-      courseName,
-      courseDescription,
-      courseCardPicture,
-      lessons,
-      price,
-      isFree,
-    };
-    addCourse(courseData);
-    
-    // history.push({
-    //   pathname: '/teacher-dashboard',
-    //   state: { courses: [...courses, courseData] },
-    // });
-    // Reset form fields after submission if needed
-    setCourseName('');
-    setCourseDescription('');
-    setCourseCardPicture(null);
-    setLessons([{ name: '', videos: [] }]);
-    setPrice('');
-    setIsFree(false);
+
+    const formData = new FormData();
+    formData.append('title', courseName);
+    formData.append('description', courseDescription);
+    formData.append('featuredImage', courseCardPicture);
+    formData.append('lessons', JSON.stringify(lessons));
+    formData.append('price', price);
+    formData.append('isFree', isFree);
+
+    try {
+      const response = await axios.post('https://edume-app-88352f017fde.herokuapp.com/courses/', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          
+        },
+      });
+
+      // Handle successful response here (e.g., show success message, redirect)
+      console.log('Course uploaded successfully:', response.data);
+
+      // Reset form fields after successful submission
+      setCourseName('');
+      setCourseDescription('');
+      setCourseCardPicture(null);
+      setLessons([{ name: '', videos: [] }]);
+      setPrice('');
+      setIsFree(false);
+
+      // Redirect to dashboard or another page
+      navigate('/Dashboard');
+    } catch (error) {
+      // Handle error (e.g., show error message)
+      console.error('Error uploading course:', error);
+    }
   };
 
   return (
