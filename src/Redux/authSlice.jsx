@@ -10,6 +10,7 @@ const initialState = {
   dob: '',
 };
 
+
 const authSlice = createSlice({
   name: 'auth',
   initialState,
@@ -29,8 +30,7 @@ const authSlice = createSlice({
     setName: (state,{payload}) => {
       state.firstName = payload;
     },
-    
-    
+
   }
 });
 

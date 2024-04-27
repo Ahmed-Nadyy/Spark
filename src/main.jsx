@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Store from './Redux/store';
+import Store from './Redux/Store';
 import LayoutAPP from './Layouts/LayoutAPP';
 import LayoutAuth from './Layouts/LayoutAuth';
 import ProtectedRoutes from './Component/ProtectedRoutes/ProtectedRoutes';
@@ -14,7 +14,6 @@ import Register from './Component/Login&register/Register';
 import ParentCourese from './Component/MyCourses/ParentCourese';
 import Dash from './Pages/dash/Dash';
 import Home from './Component/Home/Home';
-import TeacherDashboard from './Pages/TeacherDashboard/TeacherDashboard';
 import CourseUploadForm from './Component/uplaodCourse/CourseUploadForm';
 import EditProfile from './Component/EditProfile/EditProfile';
 
@@ -30,9 +29,9 @@ const routers = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'Home', element: <Home /> },
       { path: 'Courses', element: <ParentCourese /> },
-      { path: 'Dashboard', element: <Dash /> },
+      { path: 'Dashboard', element: <Dash showQuizzies={false}/> },
+      { path: "Quizzies", element: <Dash showQuizzies={true}/> },
       { path: 'editProfile', element: <EditProfile /> },
-      // { path: "Dashboard", element: <TeacherDashboard /> },
       { path: 'add-course', element: <CourseUploadForm /> },
       { path: '*', element: <ErrorPage /> },
     ],
@@ -53,6 +52,7 @@ const routers = createBrowserRouter([
 
 
 const RootComponent = (
+  
   <Provider store={Store}>
     <RouterProvider router={routers} />
   </Provider>

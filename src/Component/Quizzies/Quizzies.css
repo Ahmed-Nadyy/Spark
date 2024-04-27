@@ -1,0 +1,71 @@
+.container {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  input[type="radio"]
+  {
+    display: none; 
+  }
+
+label.box-q {
+    color: #000000;
+    display: block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #6784a1;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+  }
+  
+  label.box-q:hover {
+    background-color: #e9ecef;
+    transform: scale(1.02);
+    
+  }
+  
+  label.box-q:active {
+    transform: scale(0.98);
+  }
+  
+  input[type="radio"]:checked + label  {
+    border-color: #28a745; 
+    background-color: #e2e6ea;
+    color: #28a745; 
+  }
+  input[type="radio"]:checked + label .circle {
+    background-color: #28a745; /* Green color when the radio button is checked */
+}
+
+  .circle {
+    height: 16px;
+    width: 16px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .q-btn {
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .q-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 16px rgba(0,123,255,0.2);
+  }
+  
+  .q-btn:active {
+    background-color: #004085;
+    box-shadow: 0 5px 10px rgba(0,123,255,0.3);
+  }

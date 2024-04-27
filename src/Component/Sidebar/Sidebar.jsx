@@ -88,7 +88,7 @@ function Sidebar() {
         </div>
         <div className="menu-group ">
           <Link
-            to="#"
+            to="/Dashboard"
             className={`menu-item ${activeItem === "Overview" ? "active" : ""
               } m-1`}
             onClick={() => handleItemClick("Overview")}
@@ -98,14 +98,14 @@ function Sidebar() {
             <span>Overview</span>
           </Link>
           <Link
-            to="#"
+            to="/Quizzies"
             className={`menu-item ${activeItem === "Tasks" ? "active" : ""
               } m-1`}
             onClick={() => handleItemClick("Tasks")}
           >
             <i className="fas fa-tasks"></i>
             &nbsp;
-            <span>Tasks</span>
+            <span>Quizzies</span>
           </Link>
           <Link
             to="/courses"
