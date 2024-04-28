@@ -7,6 +7,8 @@ import img from "./LoginArt.png";
 import iconGoogle from "./Google.png";
 import iconFacebook from "./Facebook.png";
 import "./Login.css";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -41,6 +43,7 @@ export default function Login() {
       dispatch(setName(name));
       
       dispatch(loginSuccess());
+      toast.success(`Wellcome ${response.data.firstName}😊`);
       navigate('/Home');
       
     } catch (error) {
@@ -66,15 +69,15 @@ export default function Login() {
             </p>
             {error && <p className="text-danger mb-3">{error}</p>}
             <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Email
+              <label htmlFor="username" className="form-label">
+                User Name
               </label>
               <input
                 type="text"
-                id="email"
-                name="email"
+                id="username"
+                name="username"
                 className="form-control"
-                placeholder="Enter Your Email"
+                placeholder="Enter Your username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
               />
@@ -136,7 +139,7 @@ export default function Login() {
             </button>
             <p className="text-center">
               Don't have an account?{" "}
-              <a href="#" className="signup-link">
+              <a href="/Signup" className="signup-link">
                 Sign up
               </a>
             </p>

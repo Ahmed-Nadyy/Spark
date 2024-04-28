@@ -1,0 +1,49 @@
+.teacher-dashboard {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header-title {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .add-course-link a, .add-course-button a {
+    color: #4CAF50;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .add-course-link a:hover, .add-course-button a:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .course-list .TeacherCourseCard {
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .course-list .TeacherCourseCard:hover {
+    transform: translateY(-5px);
+  }
+  

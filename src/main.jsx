@@ -16,8 +16,21 @@ import Dash from './Pages/dash/Dash';
 import Home from './Component/Home/Home';
 import CourseUploadForm from './Component/uplaodCourse/CourseUploadForm';
 import EditProfile from './Component/EditProfile/EditProfile';
+import JustFirst from './Layouts/JustFirst';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const routers = createBrowserRouter([
+  {
+    path: '/',
+    element: (<JustFirst />)
+    ,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'Home', element: <Home /> },
+      { path: '*', element: <ErrorPage /> },
+    ],
+  },
   {
     path: '/',
     element: (
