@@ -3,23 +3,30 @@
     position: fixed;
     height: calc(100vh - 79px);
 }
+
 .mainGroups {
     margin-left: 280px;
 }
+
 .navIcons {
     margin-right: 10px;
 }
+
 .groupLink {
     text-decoration: none;
     padding-bottom: 10px;
     color: #8224e3;
 }
+
 .activeLink {
     border-bottom: 2px solid #5561e2;
 }
+
 .ulGroup {
+    border-top: 1px solid #e7edf2;
     border-bottom: 1px solid #e7edf2;
 }
+
 .groupSpan {
     background: rgba(0, 0, 0, 0);
     border: 1px solid #e7edf2;
@@ -31,6 +38,7 @@
     text-align: center;
     vertical-align: middle;
 }
+
 .searchGroup {
     display: flex;
     justify-content: space-between;
@@ -38,11 +46,13 @@
     margin-bottom: 1.5rem;
     border-bottom: 1px solid #e7edf2;
 }
+
 #dir-groups-search {
     border: 1px solid #e7edf2;
     border-radius: 20px;
     padding: 10px 20px;
 }
+
 .groupButton {
     border-radius: 50%;
     width: 40px;
@@ -53,11 +63,13 @@
     padding: 5px;
     margin-left: 5px;
 }
+
 #groups-order-by {
     border: 1px solid #e7edf2;
     padding: 10px 20px;
     border-radius: 20px;
 }
+
 .groupCard {
     width: 300px;
     height: 450px;
@@ -68,6 +80,7 @@
     flex-direction: column;
     align-items: center;
 }
+
 .coverImage {
     background-image: url(https://mythemestore.com/beehive-preview/wp-content/uploads/buddypress/groups/1/cover-image/5f02e9ce31d97-bp-cover-image.jpg);
     background-size: cover;
@@ -77,6 +90,7 @@
     height: 100px;
     position: relative;
 }
+
 .logoGroup {
     border-radius: 50%;
     position: absolute;
@@ -84,35 +98,42 @@
     left: calc(50% - 40px);
     border: 2px solid white;
 }
+
 .cardBody {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
+
 .groupLink {
     font-size: 1.359em;
     color: black;
     font-weight: 700;
 }
+
 .groupPara {
     color: #bbbbdc;
     font-size: 14px;
     padding-bottom: 15px;
 }
+
 .groupMembers {
     color: #626c72;
     font-size: 14px;
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
 .membersGroup {
     gap: 10px;
 }
+
 .membersGroup li {
     display: inline-block;
     margin: 0 -0.6rem;
 }
+
 .membersGroup img {
     background-color: #c5c5c5;
     width: 30px;
@@ -120,6 +141,7 @@
     border: 2px solid #fff;
     border-radius: 50%;
 }
+
 .joinBtn {
     padding: 10px 40px;
     width: 200px;
@@ -127,4 +149,133 @@
     color: #8224e3;
     border-color: #8224e3;
     background-color: transparent;
+}
+
+.profileContain {
+    margin-left: 280px;
+    min-height: 400px;
+}
+
+.leaveGroup {
+    position: absolute;
+    bottom: 30px;
+    right: 80px;
+    line-height: 26px;
+    border-radius: 30px;
+    padding: .375rem 2rem;
+    background: rgba(255, 255, 255, .2);
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: #fff;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, .6);
+}
+
+.profile-img {
+    position: relative;
+    background-image: url(https://mythemestore.com/beehive-preview/wp-content/uploads/buddypress/groups/1/cover-image/5f02e9ce31d97-bp-cover-image.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+
+.profileimg {
+    position: absolute;
+    bottom: -80px;
+    left: 40px;
+    background-image: url(https://mythemestore.com/beehive-preview/wp-content/uploads/group-avatars/1/5e2c833173b84-bpfull.jpg);
+    background-position: center;
+    background-size: cover;
+    border: 2px solid var(--white);
+    width: 100px;
+    height: 100px;
+    width: 200px;
+    aspect-ratio: auto 200 / 200;
+    height: auto;
+    border-radius: 1rem;
+    border: solid 2px #FFF;
+}
+
+.typeActive {
+    position: absolute;
+    bottom: 30px;
+    left: 280px;
+}
+
+.typePro {
+    color: #fff;
+    font-size: 18px;
+}
+
+.activePro {
+    color: #fff;
+    font-size: 12px;
+}
+
+.titleGroup {
+    margin-left: 280px;
+}
+
+.profile-nav {
+    padding: 15px 0;
+}
+
+.bp-groups-tab {
+    font-size: 18px;
+    list-style: none;
+}
+
+.linkLog {
+    line-height: 26px;
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-align: center;
+    padding-left: 1.125rem;
+}
+
+.nav-link-text {
+    display: block;
+    color: #838daa;
+}
+
+.subforum {
+    margin-left: 280px;
+    margin-bottom: 30px;
+}
+
+.subforum-title{
+    background-color:#f8f9fa;
+    padding: 5px;
+    border-radius: 5px;
+    margin:4px;
+}
+.subforum-title h1{
+    font-size: 30px !important;
+    padding: 10px 0;
+}
+
+.subforum-row{
+    display: grid;
+    grid-template-columns: 1fr 200px 200px;
+}
+
+.subforum-column{
+    padding: 10px;
+    margin:4px;
+    border-radius: 5px;
+    background: #f8f9fa;
+}
+
+.subforum-description *{
+    margin-block: 0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-icon i{
+    font-size: 45px;
 }

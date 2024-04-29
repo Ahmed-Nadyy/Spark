@@ -17,6 +17,7 @@ import ParentCourese from "./Component/MyCourses/ParentCourese.jsx";
 import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
 import Home from "./Component/Home/Home.jsx";
 import Groups from "./Component/Forum/Groups.jsx";
+import Forums from "./Component/Forum/Forums.jsx";
 
 let routers = createBrowserRouter([
   {
@@ -31,7 +32,8 @@ let routers = createBrowserRouter([
       { path: "Home", element: <Home /> },
       { path: "Courses", element: <ParentCourese /> },
       { path: "Dashboard", element: <Dashboard /> },
-      { path: "Forum", element: <Groups /> },
+      { path: "Groups", element: <Groups /> },
+      { path: "Forum", element: <Forums /> },
       { path: "*", element: <ErrorPage /> },
     ],
   },
