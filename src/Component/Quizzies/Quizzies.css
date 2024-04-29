@@ -17,11 +17,12 @@
   }
 
 label.box-q {
-    color: #000000;
+    /* color: #000000; */
+    color: #ffffff;
     display: block;
     padding: 10px 20px;
     margin: 10px 0;
-    background-color: #6784a1;
+    background-color:  #7550d1;
     border: 2px solid transparent;
     border-radius: 10px;
     cursor: pointer;
@@ -29,9 +30,9 @@ label.box-q {
   }
   
   label.box-q:hover {
-    background-color: #e9ecef;
+    /* background-color: #e9ecef; */
+    background-color: #000000;
     transform: scale(1.02);
-    
   }
   
   label.box-q:active {

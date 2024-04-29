@@ -9,17 +9,16 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function LayoutAPP() {
   const notifyOffline = () => {
-    toast.error("You are currently offline", {
-      position: "top-right",
-    });
+    toast.error(
+      "You are currently offline"
+    );
   };
 
   return (
     <>
-<ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick pauseOnHover draggable />
-
+     <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick pauseOnHover draggable />
       <Header />
-      <Offline>{notifyOffline()}</Offline>
+      <Offline>{notifyOffline}</Offline>
       <Outlet />
       <Footer />
     </>
