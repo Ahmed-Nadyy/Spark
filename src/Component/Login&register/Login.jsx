@@ -44,7 +44,7 @@ export default function Login() {
       
       dispatch(loginSuccess());
       toast.success(`Wellcome ${response.data.firstName}😊`);
-      navigate('/Home');
+       navigate('/Home');
       
     } catch (error) {
       // Handle login error
