@@ -1,23 +1,21 @@
-import React from 'react';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Store from './Redux/Store';
-import LayoutAPP from './Layouts/LayoutAPP';
-import LayoutAuth from './Layouts/LayoutAuth';
-import ProtectedRoutes from './Component/ProtectedRoutes/ProtectedRoutes';
-import ErrorPage from './Component/ErrorPage/ErrorPage';
-import Login from './Component/Login&register/Login';
-import Register from './Component/Login&register/Register';
-import ParentCourese from './Component/MyCourses/ParentCourese';
-import Dash from './Pages/dash/Dash';
-import Home from './Component/Home/Home';
-import CourseUploadForm from './Component/uplaodCourse/CourseUploadForm';
-import EditProfile from './Component/EditProfile/EditProfile';
-import JustFirst from './Layouts/JustFirst';
-import 'react-toastify/dist/ReactToastify.css';
+import ReactDOM from "react-dom/client";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
+import { Store } from "./Redux/Store.jsx";
+
+import ErrorPage from "./Component/ErrorPage/ErrorPage";
+import Login from "./Component/Login&register/Login.jsx";
+import Register from "./Component/Login&register/Register.jsx";
+import LayoutAPP from "./Layouts/LayoutAPP.jsx";
+import ProtectedRoutes from "./Component/ProtectedRoutes/ProtectedRoutes.jsx";
+import LayoutAuth from "./Layouts/LayoutAuth.jsx";
+import ParentCourese from "./Component/MyCourses/ParentCourese.jsx";
+import Dashboard from "./Pages/Dashboard/Dashboard.jsx";
+import Home from "./Component/Home/Home.jsx";
 
 
 const routers = createBrowserRouter([
@@ -40,13 +38,10 @@ const routers = createBrowserRouter([
     ),
     children: [
       { index: true, element: <Home /> },
-      { path: 'Home', element: <Home /> },
-      { path: 'Courses', element: <ParentCourese /> },
-      { path: 'Dashboard', element: <Dash showQuizzies={false}/> },
-      { path: "Quizzies", element: <Dash showQuizzies={true}/> },
-      { path: 'editProfile', element: <EditProfile /> },
-      { path: 'add-course', element: <CourseUploadForm /> },
-      { path: '*', element: <ErrorPage /> },
+      { path: "Home", element: <Home /> },
+      { path: "Courses", element: <ParentCourese /> },
+      { path: "Dashboard", element: <Dashboard /> },
+      { path: "*", element: <ErrorPage /> },
     ],
   },
   {
